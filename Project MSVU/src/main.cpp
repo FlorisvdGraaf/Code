@@ -25,7 +25,7 @@ if (xPosition >=(500 - Deadband) && xPosition <=(500 + Deadband)) { //tussen 485
   Serial.println("Direction = Stopped\n");
   Serial.println(xPosition);
   analogWrite(2,0);
-  delay(2000);
+  delay(1000);
   }
 else if (xPosition >500 + Deadband) {  //Groter dan 515
   Serial.println("Direction = Backwards\n");
@@ -35,7 +35,7 @@ else if (xPosition >500 + Deadband) {  //Groter dan 515
   Serial.println("Mapped Value:");
   Serial.println(mappedValue);
   analogWrite(2,mappedValue);
-  //delay(100);
+  delay(100);
   }
 else if (xPosition < 500 - Deadband) {
   Serial.println("Direction = Backwards\n");
